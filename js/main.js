@@ -9,12 +9,16 @@ const list = document.querySelector('.list');
 //function to take username and search in GitHub
 const getName = () => {
     const userName = username.value;
-    return fetch(`https://api.github.com/users/${userName}`)
+    if (userName !== '') {
+        return fetch(`https://api.github.com/users/${userName}`)
         .then(userResponse => userResponse.json())
         .then(userData => {
             console.log(JSON.stringify(userData));
             return userData;
         })
+    } else {
+        list.innerHTML = `<li class="error">Please enter a valid username!</li>`;
+    }
 };
 
 //function to get name from details and print name as a list
@@ -46,8 +50,13 @@ const printName = (name) => {
 const searchAndSetName = () => {
     getName()
         .then(userData => {
+            if (userData) {
             getFirstName(userData);
+            }
         })
+    .catch(error => {
+        console.error(error);
+    })
 }
 
 //add listener to button
