@@ -67,3 +67,8 @@ const searchAndSetName = () => {
 //add listener to button
 
 button.addEventListener('click', searchAndSetName);
+username.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+    searchAndSetName();
+  }
+});
