@@ -25,13 +25,18 @@ const getName = () => {
 const getFirstName = (info) => {
     const name = info.name;
     let firstName = '';
-    for (const letter of name) {
-        if (letter !== ' ') {
-            firstName += letter;  
+    if (name !== null) {
+        for (const letter of name) {
+            if (letter !== ' ') {
+                firstName += letter;  
+            }
+            else {
+                break;
+            }
         }
-        else {
-            break;
-        }
+    }
+    else {
+        list.innerHTML = `<li class="error">${name} does not have a first name saved!</li>`;
     }
     console.log(firstName);
     printName(firstName);
