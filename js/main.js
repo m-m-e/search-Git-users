@@ -34,12 +34,13 @@ const getFirstName = (info) => {
                 break;
             }
         }
+        console.log(firstName);
+        printName(firstName);
     }
     else {
-        list.innerHTML = `<li class="error">${name} does not have a first name saved!</li>`;
+        console.log('Error - no first name!');
+        list.innerHTML = `<li class="error">${info.login} does not have a first name saved!</li>`;
     }
-    console.log(firstName);
-    printName(firstName);
 }
 
 //function to print name as a list
