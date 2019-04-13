@@ -26,14 +26,8 @@ const getFirstName = (info) => {
     const name = info.name;
     let firstName = '';
     if (name !== null) {
-        for (const letter of name) {
-            if (letter !== ' ') {
-                firstName += letter;  
-            }
-            else {
-                break;
-            }
-        }
+        const nameSplit = info.name.split(" ");
+        firstName = nameSplit[0];
         console.log(firstName);
         printName(firstName);
     }
