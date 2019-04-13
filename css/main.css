@@ -1,0 +1,61 @@
+.page {
+    background: rgb(228, 151, 228);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.label {
+    color: purple;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.input-name {
+    margin-left: 15px;
+    padding: 10px;
+    width: 350px;
+}
+
+.btn {
+    background: purple;
+    color: white;
+    font-family:'Dosis', sans-serif;
+    font-weight: bold;
+    font-size: 20px; 
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    margin-top: 150px;
+    display: flex;
+    list-style: none;
+    font-size: 80px;
+    font-weight: bold;
+    color: purple;
+}
+
+.list-item {
+    background: white;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
